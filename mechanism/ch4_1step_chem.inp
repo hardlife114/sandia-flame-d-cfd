@@ -1,0 +1,13 @@
+! flameD 快速机理：CH4 + 2O2 => CO2 + 2H2O （单步总包）
+! 目的：把化学积分成本从 GRI-Mech 3.0（53 组分/325 反应）大幅降低，
+!       以便在 coarse 网格上尽快得到可看的结果。
+! 反应速率：k = 2.119e11 * exp(-20270/RT)  [m, kmol, s, K]
+ELEMENTS
+O  H  C  N
+END
+SPECIES
+CH4  O2  CO2  H2O  N2
+END
+REACTIONS
+CH4+2O2=>CO2+2H2O                          2.119E+11    0.000    20270.0
+END

@@ -1,0 +1,100 @@
+{
+  "tag": "box3d_round300",
+  "archived_at": "2026-09-20 19:55:28",
+  "git": {
+    "commit": "26b8ac58f87c1296120297059d3aabf0edead36d",
+    "short": "26b8ac5",
+    "branch": "main",
+    "describe": "v0.1.0",
+    "dirty": true
+  },
+  "environment": {
+    "fluent_version": "2025 R2",
+    "dimension": "3D",
+    "cores": 10
+  },
+  "mesh": {
+    "path": "mesh/box3d/compact_round300.msh",
+    "size": 168028955,
+    "sha256": "1c16e29936266838de5d6371cad7d5487612f071264f7a5cfa070f054d360226"
+  },
+  "case_files": {
+    "case": {
+      "path": "run/box3d_round300.cas.h5",
+      "size": 22599090,
+      "sha256": "9172c1551f0e8a2e6272e19e63c2e50908a796b97486e08bb7599c1881b9cf42"
+    },
+    "data": {
+      "path": "run/box3d_round300.dat.h5",
+      "size": 154522468,
+      "sha256": "b70415d7aa5f88a246d1d387ed939943c7bdd417d462c12020f2ecff3970acf9"
+    }
+  },
+  "boundary_conditions": {
+    "inlet_checks": [
+      {
+        "zone": "velocity-inlet-3",
+        "U": 49.6,
+        "U_expect": 49.6,
+        "T": 294.0,
+        "T_expect": 294.0
+      },
+      {
+        "zone": "velocity-inlet-4",
+        "U": 11.4,
+        "U_expect": 11.4,
+        "T": 1880.0,
+        "T_expect": 1880.0
+      },
+      {
+        "zone": "velocity-inlet-5",
+        "U": 0.9,
+        "U_expect": 0.9,
+        "T": 291.0,
+        "T_expect": 291.0
+      }
+    ],
+    "inlet_species": [
+      {
+        "zone": "velocity-inlet-3",
+        "U": 49.6,
+        "T": 294.0,
+        "species": "{'ch4': 0.15637, 'o2': 0.1965}"
+      },
+      {
+        "zone": "velocity-inlet-4",
+        "U": 11.4,
+        "T": 1880.0,
+        "species": "{'o2': 0.054, 'h2o': 0.0942, 'co2': 0.1098, 'co': 0.00407}"
+      },
+      {
+        "zone": "velocity-inlet-5",
+        "U": 0.9,
+        "T": 291.0,
+        "species": "{'o2': 0.23574, 'h2o': 0.00626}"
+      }
+    ],
+    "inlet_records": [
+      "velocity-inlet-3: U=49.6 T=294.0 组分显式={'ch4': 0.15637, 'o2': 0.1965} 和=0.35287 → 回读={'ch4': 0.15637, 'o2': 0.1965} 和=0.35287",
+      "velocity-inlet-4: U=11.4 T=1880.0 组分显式={'o2': 0.054, 'h2o': 0.0942, 'co2': 0.1098, 'co': 0.00407} 和=0.26207 → 回读={'co': 0.00407, 'co2': 0.1098, 'h2o': 0.0942, 'o2': 0.054} 和=0.26207",
+      "velocity-inlet-5: U=0.9 T=291.0 组分显式={'o2': 0.23574, 'h2o': 0.00626} 和=0.24200 → 回读={'h2o': 0.00626, 'o2': 0.23574} 和=0.24200",
+      "[校验] velocity-inlet-3     U=49.6(应 49.6)  T=294.0(应 294.0)  ✓",
+      "[校验] velocity-inlet-4     U=11.4(应 11.4)  T=1880.0(应 1880.0)  ✓",
+      "[校验] velocity-inlet-5     U=0.9(应 0.9)  T=291.0(应 291.0)  ✓"
+    ],
+    "zones_active": "['jet', 'pilot', 'coflow']",
+    "zones_missing": "['air']"
+  },
+  "solver": {
+    "steps_cold": 60,
+    "steps_react": 450,
+    "segments": 18,
+    "segment_size": 25,
+    "urf": 0.5,
+    "second_order_equations": 9,
+    "sec_per_step_median": 6.16
+  },
+  "convergence": null,
+  "metrics": {},
+  "source_log": "run/driver_box3d_round300.log"
+}

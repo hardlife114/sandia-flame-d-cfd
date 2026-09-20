@@ -1,0 +1,55 @@
+{
+  "tag": "box3d_mix",
+  "archived_at": "2026-09-20 19:55:36",
+  "git": {
+    "commit": "26b8ac58f87c1296120297059d3aabf0edead36d",
+    "short": "26b8ac5",
+    "branch": "main",
+    "describe": "v0.1.0",
+    "dirty": true
+  },
+  "environment": {},
+  "mesh": {
+    "path": "mesh/box3d/compact_round300.msh",
+    "size": 168028955,
+    "sha256": "1c16e29936266838de5d6371cad7d5487612f071264f7a5cfa070f054d360226"
+  },
+  "case_files": {
+    "case": {
+      "path": "run/box3d_mix.cas.h5",
+      "size": 22598446,
+      "sha256": "bf3d4b4f47d54756d7e6d47cc72028f5ecb8162e351e0c63e5bc88508b0cbad2"
+    },
+    "data": {
+      "path": "run/box3d_mix.dat.h5",
+      "size": 136091040,
+      "sha256": "e9a70ddf589330019f5ae30d474b41eb45723fa54ecc58e14ed4ce6af9b3e5ec"
+    }
+  },
+  "boundary_conditions": {
+    "inlet_checks": [],
+    "inlet_species": [],
+    "inlet_records": [
+      "velocity-inlet-3: U=49.6 I=0.0879 Dh=0.0072 组分={'ch4': 0.15637, 'o2': 0.1965}",
+      "velocity-inlet-4: U=11.4 I=0.1092 Dh=0.0105 组分={'co': 0.00407, 'co2': 0.1098, 'h2o': 0.0942, 'o2': 0.054}",
+      "velocity-inlet-5: U=0.9 I=0.01 Dh=0.3 组分={'h2o': 0.00626, 'o2': 0.23574}",
+      "[校验] velocity-inlet-3     U=49.6(应 49.6)  ✓",
+      "[校验] velocity-inlet-4     U=11.4(应 11.4)  ✓",
+      "[校验] velocity-inlet-5     U=0.9(应 0.9)  ✓"
+    ],
+    "zones_active": null,
+    "zones_missing": null
+  },
+  "solver": {
+    "steps_cold": 60,
+    "steps_react": 300,
+    "segments": 1,
+    "segment_size": null,
+    "urf": null,
+    "second_order_equations": null,
+    "sec_per_step_median": 4.66
+  },
+  "convergence": null,
+  "metrics": {},
+  "source_log": "run/log_box3d_mix.txt"
+}

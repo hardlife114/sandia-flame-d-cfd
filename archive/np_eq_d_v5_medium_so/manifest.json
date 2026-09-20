@@ -1,0 +1,55 @@
+{
+  "tag": "np_eq_d_v5_medium_so",
+  "archived_at": "2026-09-20 19:55:41",
+  "git": {
+    "commit": "26b8ac58f87c1296120297059d3aabf0edead36d",
+    "short": "26b8ac5",
+    "branch": "main",
+    "describe": "v0.1.0",
+    "dirty": true
+  },
+  "environment": {
+    "fluent_version": "2025 R2",
+    "cores": 10
+  },
+  "mesh": {
+    "path": "mesh/v5/medium.msh",
+    "size": 20488642,
+    "sha256": "fb7123eb7c185ea78fe82f81465d5fce629664b251718afda8bfda27341b4cd6"
+  },
+  "case_files": {
+    "case": {
+      "path": "run/np_eq_d_v5_medium_so.cas.h5",
+      "size": 3304322,
+      "sha256": "0f792a5897d8e55e845dc0a92f52645e429a203120300deb71e949286de64d6d"
+    },
+    "data": {
+      "path": "run/np_eq_d_v5_medium_so.dat.h5",
+      "size": 26881439,
+      "sha256": "03e1a3420919ddc88bd9e7e2ed2831f042c4aa07a3faadd3922da9e48df9453b"
+    }
+  },
+  "boundary_conditions": {
+    "inlet_checks": [],
+    "inlet_species": [],
+    "inlet_records": [
+      "velocity-inlet-5: f=1.0 OK（键 mean_mixture_fraction，回读={'option': 'value', 'value': 1.0}）",
+      "velocity-inlet-6: f=0.27 OK（键 mean_mixture_fraction，回读={'option': 'value', 'value': 0.27}）",
+      "velocity-inlet-7: f=0.0 OK（键 mean_mixture_fraction，回读={'option': 'value', 'value': 0}）"
+    ],
+    "zones_active": null,
+    "zones_missing": null
+  },
+  "solver": {
+    "steps_cold": null,
+    "steps_react": 3000,
+    "segments": null,
+    "segment_size": null,
+    "urf": 0.5,
+    "second_order_equations": 5,
+    "sec_per_step_median": 0.57
+  },
+  "convergence": null,
+  "metrics": {},
+  "source_log": "run/log_np_eq_d_v5_medium_so.txt"
+}
