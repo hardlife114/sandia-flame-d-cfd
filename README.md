@@ -248,6 +248,8 @@ GUI 只需：Species Model → Non-Premixed（Equilibrium + Beta PDF）→ 另�
 
 ## 八、许可
 
-代码与文档采用 **MIT License**（见 `LICENSE`）。
-`mechanism/grimech30_*` 与 `results/tnf_flamed.csv` 为**第三方材料**，
-遵循其原始条款，**不在** MIT 授权范围内。
+本项目代码与文档采用 **MIT License**（见 [`LICENSE`](LICENSE)）。
+
+第三方材料 —— **GRI-Mech 3.0 机理**（`mechanism/grimech30_*`）与
+**Sandia/TNF 实验数据**（`results/tnf_flamed.csv`）—— 遵循其原始条款，
+**不在 MIT 授权范围内**，详见 [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md)。
